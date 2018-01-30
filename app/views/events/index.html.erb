@@ -1,0 +1,27 @@
+<h1>Event</h1>
+
+<% @events.each do |t| %>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Alcohol Served</th>
+        </tr>
+    </thead>
+    <tbody>
+<tr>
+<td><%= t.date %></td>
+<td><%= t.alcohol_served %></td>
+<td><%= link_to "Edit Event", edit_event_path(t) %></td>
+<td><%= link_to "Delete Event", event_path(t), method: :delete, data: {confirm: "Are you sure?"} %><td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+<div class="container">
+  <div class="text-center">
+<p> <%= link_to "Add a new Event", new_event_path %> </p>
+</div>
+</div>
+

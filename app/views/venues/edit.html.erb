@@ -1,0 +1,10 @@
+<%= bootstrap_form_for(@venue, layout: :horizontal) do |t| %>
+			<p><%= t.text_field :name %></p>
+			<p><%= t.text_field :city %></p>
+			<p><%= t.text_field :state %></p>
+			<p><%= t.text_field :family_friendly %></p>
+			
+		<div class="text-center">
+				<%= submit_tag "Confirm" %>
+		</div>
+		<% end %>

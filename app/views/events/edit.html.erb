@@ -1,0 +1,7 @@
+<%= bootstrap_form_for(@event, layout: :horizontal) do |t| %>
+			<p><%= t.text_field :date %></p>
+			<p><%= t.text_field :alcohol_served %></p>
+		<div class="text-center">
+				<%= submit_tag "Confirm" %>
+		</div>
+		<% end %>
